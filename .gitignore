@@ -1,3 +1,5 @@
 # Ignored files
 .DS_Store
+__pychache__
+.ipynb checkpoints
 *.csv
