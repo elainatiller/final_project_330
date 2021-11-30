@@ -1,6 +1,7 @@
-!pip install geopandas
-!pip install geopy
-!pip install pgeocode
+#!pip install geopandas
+#!pip install geopy
+#!pip install pgeocode
+#!pip install haversine
 import matplotlib.pyplot as plt
 import pandas as pd
 from geopy.geocoders import Photon
@@ -35,7 +36,8 @@ def lat_long_for_hospital(address):
             return location[1]
 
 def file_pre_processing():
-    global geolocator = Photon(user_agent="Final Project1", timeout=10)
+    global geolocator
+    geolocator = Photon(user_agent="Final Project1", timeout=10)
     
     required_columns = ['Provider ID', 'Hospital Name', 'Address', 'City', 'State', 'ZIP Code', 'Hospital Type', \
                'Hospital Ownership', 'Emergency Services', 'Hospital overall rating', \
