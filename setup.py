@@ -14,6 +14,7 @@ import re
 import json
 import seaborn as sns
 import os
+from math import sqrt
 
 #Inputs: string as county to query geolocator with (St. Louis city, MO)
 #Output: tuple wit zipcode (int) and str of lat/long
